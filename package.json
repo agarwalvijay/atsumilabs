@@ -1,0 +1,13 @@
+{
+  "name": "atsumilabs",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Atsumi Labs marketing site (static, served by a zero-dependency Node server under pm2).",
+  "type": "commonjs",
+  "scripts": {
+    "start": "node server.js"
+  },
+  "engines": {
+    "node": ">=18"
+  }
+}

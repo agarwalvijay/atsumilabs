@@ -1,0 +1,74 @@
+/* Shared styling for the Privacy + Terms pages — Atsumi washi/ink theme. */
+@import url('https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,500;0,9..144,600;1,9..144,400&family=Hanken+Grotesk:wght@400;500;600;700&family=Spline+Sans+Mono:wght@400;500&display=swap');
+
+:root {
+  --paper:   #f4ede1;
+  --paper-2: #ece1cf;
+  --ink:     #211b16;
+  --ink-2:   #4a4038;
+  --ink-3:   #7a6e60;
+  --shu:     #d8472b;
+  --shu-deep:#b23a23;
+  --line:    rgba(33, 27, 22, 0.14);
+  --serif: "Fraunces", Georgia, serif;
+  --sans:  "Hanken Grotesk", system-ui, sans-serif;
+  --mono:  "Spline Sans Mono", ui-monospace, monospace;
+}
+* { box-sizing: border-box; margin: 0; padding: 0; }
+body {
+  font-family: var(--sans);
+  color: var(--ink);
+  background-color: var(--paper);
+  background-image:
+    radial-gradient(1000px 700px at 88% -10%, rgba(216,71,43,0.06), transparent 60%),
+    radial-gradient(800px 650px at -5% 6%, rgba(150,120,70,0.08), transparent 55%);
+  background-attachment: fixed;
+  min-height: 100vh;
+  line-height: 1.66;
+  -webkit-font-smoothing: antialiased;
+}
+::selection { background: var(--shu); color: var(--paper); }
+
+.home-btn {
+  position: fixed; top: 16px; left: 16px;
+  width: 46px; height: 46px; border-radius: 24%;
+  display: grid; place-items: center; text-decoration: none;
+  background: var(--shu); color: var(--paper);
+  font-family: var(--serif); font-size: 1.2rem; line-height: 1;
+  transform: rotate(-4deg);
+  box-shadow: 0 6px 18px rgba(178,58,35,0.28);
+  transition: transform 0.2s ease;
+}
+.home-btn:hover { transform: rotate(0deg) scale(1.05); }
+
+.legal { max-width: 720px; margin: 0 auto; padding: clamp(4.5rem, 10vh, 6.5rem) 1.4rem 4rem; }
+.legal .kicker {
+  font-family: var(--mono); font-size: 0.74rem; letter-spacing: 0.18em;
+  text-transform: uppercase; color: var(--shu-deep); margin-bottom: 0.8rem;
+}
+.legal h1 {
+  font-family: var(--serif); font-weight: 600;
+  font-size: clamp(2.2rem, 7vw, 3.4rem); line-height: 1.04; letter-spacing: -0.02em;
+  margin-bottom: 0.3rem;
+}
+.legal .updated { color: var(--ink-3); font-size: 0.9rem; margin-bottom: 2.2rem; }
+.legal h2 {
+  font-family: var(--serif); font-weight: 600; color: var(--ink);
+  font-size: 1.45rem; letter-spacing: -0.01em; margin: 2.2rem 0 0.6rem;
+}
+.legal p, .legal li { color: var(--ink-2); margin-bottom: 0.7rem; }
+.legal ul { padding-left: 1.3rem; margin-bottom: 0.7rem; }
+.legal strong { color: var(--ink); }
+.legal em { color: var(--shu-deep); font-style: italic; }
+.legal a { color: var(--shu-deep); border-bottom: 1px solid rgba(178,58,35,0.35); }
+.legal a:hover { color: var(--shu); }
+.legal .intro { font-size: 1.12rem; color: var(--ink); }
+.legal .back {
+  display: inline-block; margin-top: 2.6rem; color: var(--shu-deep);
+  font-weight: 600; border: none;
+}
+.legal .back:hover { color: var(--shu); }
+.legal .disclaimer {
+  margin-top: 2.6rem; padding-top: 1.3rem; border-top: 1px solid var(--line);
+  color: var(--ink-3); font-size: 0.85rem;
+}

@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <!-- Google Analytics (GA4) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-JYN40ZXBK0"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-JYN40ZXBK0');
+  </script>
+
+  <title>Skyfield — hyperlocal weather · Atsumi Labs</title>
+  <meta name="description" content="Skyfield is a hyperlocal weather app powered directly by the U.S. National Weather Service — point forecasts, animated radar, and severe-weather alerts. By Atsumi Labs." />
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Crect x='6' y='6' width='88' height='88' rx='18' fill='%23d8472b'/%3E%3Ctext x='50' y='72' font-size='62' text-anchor='middle' fill='%23f3ece1' font-family='serif'%3E%E9%9B%86%3C/text%3E%3C/svg%3E" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,500;0,9..144,600;1,9..144,400&family=Hanken+Grotesk:wght@400;500;600;700&family=Spline+Sans+Mono:wght@400;500&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+  <link rel="stylesheet" href="skyfield.css" />
+</head>
+<body>
+  <svg class="grain" aria-hidden="true"><filter id="n"><feTurbulence type="fractalNoise" baseFrequency="0.8" numOctaves="2" stitchTiles="stitch"/></filter><rect width="100%" height="100%" filter="url(#n)"/></svg>
+
+  <header class="site-head">
+    <a class="brand" href="index.html" aria-label="Atsumi Labs home">
+      <span class="seal" aria-hidden="true">集</span>
+      <span class="wordmark">Atsumi&nbsp;Labs</span>
+    </a>
+    <nav class="nav">
+      <a href="index.html#work">Work</a>
+      <a href="index.html#about">About</a>
+      <a href="index.html#contact">Contact</a>
+    </nav>
+  </header>
+
+  <main>
+    <!-- ───────────── showcase hero ───────────── -->
+    <section class="sky-hero">
+      <div class="sky-copy">
+        <p class="eyebrow reveal" style="--d:0ms">
+          <a class="crumb" href="index.html#work">← The Collection</a> &nbsp;·&nbsp; No. 01
+        </p>
+        <h1 class="reveal" style="--d:80ms">Skyfield</h1>
+        <p class="sky-tagline reveal" style="--d:160ms">
+          Hyperlocal weather, radar, and alerts — straight from the
+          <span class="ink-accent">U.S. National Weather Service.</span>
+        </p>
+        <p class="sky-lede reveal" style="--d:260ms">
+          A forecast for your exact spot, not the nearest city. Animated radar with live
+          storm polygons, severe-weather alerts you can actually read, and a sky that
+          quietly shifts with the real conditions outside your window.
+        </p>
+        <div class="sky-cta reveal" style="--d:360ms">
+          <span class="badge-soon">In development · launching soon</span>
+        </div>
+        <ul class="sky-points reveal" style="--d:440ms">
+          <li><b>AI nowcast</b> — live radar tracked forward to the minute</li>
+          <li><b>Point forecasts</b> at your precise GPS coordinates</li>
+          <li><b>Animated radar</b> with alert polygons on the map</li>
+          <li><b>Severe alerts</b>, hourly &amp; 7-day, and the raw forecast discussion</li>
+          <li><b>Installable PWA</b> — no app store, no account, no tracking</li>
+        </ul>
+      </div>
+
+      <!-- phone frame -->
+      <div class="phone-wrap reveal" style="--d:240ms">
+        <div class="phone">
+          <div class="phone-notch" aria-hidden="true"></div>
+          <!-- data-app-url: where the live Skyfield web app is hosted.
+               Change to your deployed URL (e.g. https://skyfield.atsumilabs.com/).
+               Override at runtime for testing with ?app=<url> in the page URL. -->
+          <div class="phone-screen" id="sky-screen" data-app-url="https://skyfield.atsumilabs.com/">
+            <img class="screen-poster" src="assets/skyfield-screen.png"
+                 alt="Skyfield app welcome screen" />
+            <div class="screen-fade" aria-hidden="true"></div>
+            <span class="live-pill" aria-hidden="true"><i></i>live</span>
+          </div>
+        </div>
+        <div class="phone-glow" aria-hidden="true"></div>
+      </div>
+    </section>
+
+    <!-- ───────────── nowcast spotlight ───────────── -->
+    <section class="sky-spotlight">
+      <div class="spot-inner">
+        <div class="spot-copy">
+          <span class="spot-eyebrow">◖ AI Nowcast</span>
+          <h2>Will it rain in the<br />next ten minutes?</h2>
+          <p>
+            Most apps shrug and show you &ldquo;40% chance.&rdquo; Skyfield reads the
+            <strong>live radar</strong> sweeping over your exact location, works out how the
+            storm cells around you are actually <strong>moving</strong>, and projects that
+            motion forward — so you get a straight answer:
+          </p>
+          <p class="spot-quote">&ldquo;Light rain reaching you in ~10 min&rdquo; &nbsp;·&nbsp; &ldquo;Clearing in ~20 min&rdquo;</p>
+          <p class="spot-foot">
+            Minute-by-minute precipitation, extrapolated from real radar at your point —
+            not a generic hourly model. It catches the pop-up shower the forecast misses.
+          </p>
+        </div>
+
+        <!-- radar motif -->
+        <div class="radar" aria-hidden="true">
+          <div class="radar-rings"><span></span><span></span><span></span></div>
+          <div class="radar-sweep"></div>
+          <div class="radar-cell"></div>
+          <div class="radar-motion"></div>
+          <div class="radar-dot"></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ───────────── features ───────────── -->
+    <section class="sky-features">
+      <div class="section-head">
+        <span class="sec-label">Inside Skyfield</span>
+        <h2>Everything the weather is doing,<br />where you actually are.</h2>
+      </div>
+      <div class="feat-grid">
+        <article class="feat">
+          <span class="feat-mark">⌖</span>
+          <h3>Hyperlocal, not nearby</h3>
+          <p>NWS gridpoint forecasts for your exact coordinates, with current conditions pulled from the nearest reporting station.</p>
+        </article>
+        <article class="feat">
+          <span class="feat-mark">◉</span>
+          <h3>Radar you can scrub</h3>
+          <p>~2 hours of animated precipitation over a dark basemap, with active alert polygons drawn right on the map.</p>
+        </article>
+        <article class="feat">
+          <span class="feat-mark">⚠</span>
+          <h3>Alerts, in plain words</h3>
+          <p>Live severe-weather banners, color-coded by severity, with timing and preparedness actions you can read at a glance.</p>
+        </article>
+        <article class="feat">
+          <span class="feat-mark">☁</span>
+          <h3>A living sky</h3>
+          <p>The background — glow, stars, precipitation veils — responds to the real conditions and time of day around you.</p>
+        </article>
+        <article class="feat">
+          <span class="feat-mark">⊞</span>
+          <h3>Saved places</h3>
+          <p>GPS plus unlimited saved locations, with your choice of units for temperature, wind, pressure, and distance.</p>
+        </article>
+        <article class="feat">
+          <span class="feat-mark">⤓</span>
+          <h3>Installs in a tap</h3>
+          <p>A fast, offline-capable PWA today — with a native build (widgets, background alerts) on the way.</p>
+        </article>
+      </div>
+      <p class="sky-attribution">
+        Weather data from the U.S. National Weather Service. Skyfield is an independent app
+        and is not affiliated with or endorsed by NOAA or the NWS.
+      </p>
+    </section>
+  </main>
+
+  <!-- ───────────── footer with privacy + terms ───────────── -->
+  <footer class="sky-foot">
+    <div class="sky-foot-brand">
+      <span class="seal" aria-hidden="true">集</span>
+      <div>
+        <strong>Skyfield</strong>
+        <span>An app by Atsumi Labs LLC</span>
+      </div>
+    </div>
+    <nav class="sky-foot-nav">
+      <a href="index.html">Atsumi Labs</a>
+      <a href="skyfield-privacy.html">Privacy</a>
+      <a href="skyfield-terms.html">Terms</a>
+      <a href="mailto:contact@atsumilabs.com">Contact</a>
+    </nav>
+    <p class="copy">© 2026 Atsumi Labs LLC. Weather data courtesy of the U.S. National Weather Service.</p>
+  </footer>
+
+  <script>
+    // Embed the live Skyfield web app inside the phone frame.
+    // Poster shows instantly; the real app lazy-loads when the frame scrolls
+    // into view, then cross-fades in. URL comes from data-app-url, overridable
+    // with ?app=<url> for local testing (e.g. ?app=http://localhost:4178/).
+    (function () {
+      var screen = document.getElementById('sky-screen');
+      if (!screen) return;
+      var override = new URLSearchParams(location.search).get('app');
+      var url = override || screen.dataset.appUrl;
+      if (!url) return; // no app configured → keep the static poster
+
+      var loaded = false;
+      function mount() {
+        if (loaded) return;
+        loaded = true;
+        var frame = document.createElement('iframe');
+        frame.className = 'screen-frame';
+        frame.src = url;
+        frame.title = 'Skyfield — live web app';
+        frame.loading = 'lazy';
+        frame.allow = 'geolocation; fullscreen';
+        frame.referrerPolicy = 'no-referrer-when-downgrade';
+        frame.addEventListener('load', function () { screen.classList.add('is-live'); });
+        frame.addEventListener('error', function () { screen.classList.remove('is-live'); });
+        screen.insertBefore(frame, screen.firstChild);
+      }
+
+      if ('IntersectionObserver' in window) {
+        var io = new IntersectionObserver(function (entries) {
+          entries.forEach(function (e) { if (e.isIntersecting) { mount(); io.disconnect(); } });
+        }, { rootMargin: '200px' });
+        io.observe(screen);
+      } else {
+        mount();
+      }
+    })();
+  </script>
+</body>
+</html>

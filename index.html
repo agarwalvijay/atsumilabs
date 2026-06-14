@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <!-- Google Analytics (GA4) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-JYN40ZXBK0"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-JYN40ZXBK0');
+  </script>
+
+  <title>Atsumi Labs — small software, gathered with care</title>
+  <meta name="description" content="Atsumi Labs LLC is an independent studio gathering small, useful consumer apps under one roof — built quietly, shipped properly." />
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Crect x='6' y='6' width='88' height='88' rx='18' fill='%23d8472b'/%3E%3Ctext x='50' y='72' font-size='62' text-anchor='middle' fill='%23f3ece1' font-family='serif'%3E%E9%9B%86%3C/text%3E%3C/svg%3E" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,500;0,9..144,600;1,9..144,400&family=Hanken+Grotesk:wght@400;500;600;700&family=Spline+Sans+Mono:wght@400;500&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <!-- grain + paper texture overlay -->
+  <svg class="grain" aria-hidden="true"><filter id="n"><feTurbulence type="fractalNoise" baseFrequency="0.8" numOctaves="2" stitchTiles="stitch"/></filter><rect width="100%" height="100%" filter="url(#n)"/></svg>
+
+  <header class="site-head">
+    <a class="brand" href="#top" aria-label="Atsumi Labs home">
+      <span class="seal" aria-hidden="true">集</span>
+      <span class="wordmark">Atsumi&nbsp;Labs</span>
+    </a>
+    <nav class="nav">
+      <a href="#work">Work</a>
+      <a href="#about">About</a>
+      <a href="#contact">Contact</a>
+    </nav>
+  </header>
+
+  <main id="top">
+    <!-- ───────────────── HERO ───────────────── -->
+    <section class="hero">
+      <span class="kanji-ghost" aria-hidden="true">集</span>
+      <div class="hero-inner">
+        <p class="eyebrow reveal" style="--d:0ms">集み &nbsp;·&nbsp; Atsumi &nbsp;·&nbsp; <em>to gather, to collect</em></p>
+        <h1 class="reveal" style="--d:80ms">
+          Small software,<br />
+          gathered with <span class="ink-accent">care.</span>
+        </h1>
+        <p class="lede reveal" style="--d:200ms">
+          Atsumi Labs is an independent studio that gathers small, genuinely useful
+          consumer apps under one roof — well-made tools, built quietly and shipped
+          properly.
+        </p>
+        <div class="hero-cta reveal" style="--d:320ms">
+          <a class="btn btn-primary" href="#work">See the work</a>
+          <a class="btn btn-ghost" href="#contact">Get in touch</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- ───────────────── WORK / CATALOG ───────────────── -->
+    <section id="work" class="work">
+      <div class="section-head">
+        <span class="sec-label">01 — The Collection</span>
+        <h2>What we&rsquo;ve gathered<br />so far</h2>
+        <p class="section-note">
+          A handful of products, each solving one real problem well. More join the
+          shelf as they&rsquo;re ready.
+        </p>
+      </div>
+
+      <ol class="catalog">
+        <!-- Skyfield -->
+        <li class="card reveal" style="--d:0ms">
+          <span class="card-kanji" aria-hidden="true">空</span>
+          <div class="card-top">
+            <span class="num">No. 01</span>
+            <span class="status status-soon">In development</span>
+          </div>
+          <h3>Skyfield</h3>
+          <p class="card-tag">Hyperlocal weather, done right</p>
+          <p class="card-desc">
+            A modern weather app powered directly by the U.S. National Weather Service.
+            Point forecasts for your exact coordinates, animated radar with live storm
+            polygons, severe-weather alerts, and a sky that quietly changes with the real
+            conditions outside. Installable PWA, with a native build on the way.
+          </p>
+          <ul class="chips">
+            <li>NWS data</li><li>Animated radar</li><li>Severe alerts</li><li>PWA</li>
+          </ul>
+          <a class="card-link" href="skyfield.html">Preview Skyfield →</a>
+        </li>
+
+        <!-- AliasNest -->
+        <li class="card reveal" style="--d:120ms">
+          <span class="card-kanji" aria-hidden="true">封</span>
+          <div class="card-top">
+            <span class="num">No. 02</span>
+            <span class="status status-beta">Private beta</span>
+          </div>
+          <h3>AliasNest</h3>
+          <p class="card-tag">Email aliases &amp; relay for your domain</p>
+          <p class="card-desc">
+            Give every site its own throwaway address. AliasNest creates masked email
+            aliases on a shared domain or one you own and verify, quietly relaying the
+            mail to your real inbox. Hand out a mask, keep your real address private, and
+            burn any alias the moment it starts attracting spam.
+          </p>
+          <ul class="chips">
+            <li>Custom domains</li><li>Mask &amp; relay</li><li>SMTP inbound</li><li>Self-host</li>
+          </ul>
+          <a class="card-link" href="https://aliasnest.com" target="_blank" rel="noopener">aliasnest.com →</a>
+        </li>
+
+        <!-- Tadka Play -->
+        <li class="card reveal" style="--d:240ms">
+          <span class="card-kanji" aria-hidden="true">遊</span>
+          <div class="card-top">
+            <span class="num">No. 03</span>
+            <span class="status status-live">Live</span>
+          </div>
+          <h3>Tadka Play</h3>
+          <p class="card-tag">Party games with a desi twist</p>
+          <p class="card-desc">
+            Homemade multiplayer party games — host on the big screen, everyone plays on
+            their phones. No accounts, no installs, no fuss: open a room, share the code,
+            and play. A growing collection of fast, social games for when people are
+            actually together.
+          </p>
+          <ul class="chips">
+            <li>Big-screen + phones</li><li>No accounts</li><li>Real-time</li><li>Free</li>
+          </ul>
+          <a class="card-link" href="https://tadkaplay.com" target="_blank" rel="noopener">tadkaplay.com →</a>
+        </li>
+
+        <!-- ComEd PricePulse -->
+        <li class="card reveal" style="--d:360ms">
+          <span class="card-kanji" aria-hidden="true">電</span>
+          <div class="card-top">
+            <span class="num">No. 04</span>
+            <span class="status status-beta">Android</span>
+          </div>
+          <h3>ComEd PricePulse</h3>
+          <p class="card-tag">Real-time electricity prices for ComEd</p>
+          <p class="card-desc">
+            Hourly pricing in northern Illinois swings minute to minute. PricePulse tracks
+            ComEd&rsquo;s live 5-minute and day-ahead rates, charts the trend, and pings you
+            when prices spike or dip — so you can run the dryer when power is cheap and hold
+            off when it isn&rsquo;t. Android now, with web and iOS to follow.
+          </p>
+          <ul class="chips">
+            <li>Live 5-min rates</li><li>Day-ahead</li><li>Price alerts</li><li>Android</li>
+          </ul>
+          <span class="card-link" aria-disabled="true">On Google Play soon →</span>
+        </li>
+      </ol>
+    </section>
+
+    <!-- ───────────────── ABOUT ───────────────── -->
+    <section id="about" class="about">
+      <span class="kanji-ghost kanji-ghost--right" aria-hidden="true">所</span>
+      <div class="about-grid">
+        <div class="about-label">
+          <span class="sec-label">02 — The Studio</span>
+        </div>
+        <div class="about-body">
+          <h2>One umbrella,<br />many small things.</h2>
+          <p>
+            <strong>Atsumi Labs LLC</strong> is an independent software studio. We design,
+            build, and operate small consumer products end to end — the kind of focused,
+            unglamorous tools we wanted to exist and couldn&rsquo;t find done well.
+          </p>
+          <p>
+            The name comes from the Japanese <em>atsumi</em> (集み) — <em>a gathering</em>.
+            That&rsquo;s the whole idea: a single, trustworthy roof for a growing collection
+            of apps, so each one inherits the same standards for privacy, craft, and
+            longevity.
+          </p>
+          <ul class="principles">
+            <li><span>Privacy first</span> No selling data. We collect the minimum and say so plainly.</li>
+            <li><span>Built to last</span> Small, dependable software we intend to keep running.</li>
+            <li><span>Craft over hype</span> Fewer features, finished properly.</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- ───────────────── CONTACT ───────────────── -->
+    <section id="contact" class="contact">
+      <span class="seal seal-lg" aria-hidden="true">集</span>
+      <p class="sec-label">03 — Say hello</p>
+      <h2>Let&rsquo;s talk.</h2>
+      <p class="contact-note">
+        Questions, partnerships, press, or just curious what we&rsquo;re gathering next?
+      </p>
+      <a class="mailto" href="mailto:contact@atsumilabs.com">contact@atsumilabs.com</a>
+    </section>
+  </main>
+
+  <footer class="site-foot">
+    <div class="foot-brand">
+      <span class="seal" aria-hidden="true">集</span>
+      <span>Atsumi&nbsp;Labs&nbsp;LLC</span>
+    </div>
+    <nav class="foot-nav">
+      <a href="#work">Work</a>
+      <a href="#about">About</a>
+      <a href="mailto:contact@atsumilabs.com">Contact</a>
+      <a href="privacy.html">Privacy</a>
+      <a href="terms.html">Terms</a>
+    </nav>
+    <p class="copy">© 2026 Atsumi Labs LLC. All rights reserved.</p>
+  </footer>
+</body>
+</html>
