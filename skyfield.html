@@ -189,29 +189,38 @@
       var url = override || screen.dataset.appUrl;
       if (!url) return; // no app configured → keep the static poster
 
-      var loaded = false;
+      var mounted = false;
       function mount() {
-        if (loaded) return;
-        loaded = true;
+        if (mounted) return;
+        mounted = true;
         var frame = document.createElement('iframe');
         frame.className = 'screen-frame';
         frame.src = url;
         frame.title = 'Skyfield — live web app';
-        frame.loading = 'lazy';
         frame.allow = 'geolocation; fullscreen';
         frame.referrerPolicy = 'no-referrer-when-downgrade';
         frame.addEventListener('load', function () { screen.classList.add('is-live'); });
-        frame.addEventListener('error', function () { screen.classList.remove('is-live'); });
         screen.insertBefore(frame, screen.firstChild);
+      }
+
+      // Only reveal the live app once the URL is actually reachable — otherwise
+      // keep the poster (no broken-page state). Retries for a few minutes so an
+      // already-open tab upgrades itself the moment the app goes live.
+      var tries = 0;
+      function check() {
+        if (mounted) return;
+        fetch(url, { mode: 'no-cors', cache: 'no-store' })
+          .then(function () { mount(); })
+          .catch(function () { if (++tries < 24) setTimeout(check, 15000); });
       }
 
       if ('IntersectionObserver' in window) {
         var io = new IntersectionObserver(function (entries) {
-          entries.forEach(function (e) { if (e.isIntersecting) { mount(); io.disconnect(); } });
+          entries.forEach(function (e) { if (e.isIntersecting) { check(); io.disconnect(); } });
         }, { rootMargin: '200px' });
         io.observe(screen);
       } else {
-        mount();
+        check();
       }
     })();
   </script>

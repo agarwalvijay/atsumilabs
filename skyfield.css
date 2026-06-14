@@ -77,6 +77,11 @@
 .phone-screen {
   position: relative; width: 100%; height: 100%;
   border-radius: 34px; overflow: hidden; background: #0a0e1a;
+  /* force a compositing layer so the rounded corners clip the <iframe>
+     from the start (otherwise the iframe's square corners poke out until
+     a repaint is triggered, e.g. on hover). */
+  transform: translateZ(0);
+  isolation: isolate;
 }
 .screen-poster { width: 100%; height: 100%; object-fit: cover; object-position: top center; display: block; }
 .screen-fade {
@@ -87,7 +92,7 @@
 /* live app iframe — sits above the poster, fades in once loaded */
 .screen-frame {
   position: absolute; inset: 0; width: 100%; height: 100%;
-  border: 0; z-index: 1; opacity: 0; transition: opacity 0.7s ease;
+  border: 0; border-radius: 34px; z-index: 1; opacity: 0; transition: opacity 0.7s ease;
   background: #0a0e1a;
 }
 .phone-screen.is-live .screen-frame { opacity: 1; z-index: 3; }
