@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://atsumilabs.com/sitemap.xml
