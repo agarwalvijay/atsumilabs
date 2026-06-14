@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <!-- Google Analytics (GA4) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-JYN40ZXBK0"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-JYN40ZXBK0');
+  </script>
+
+  <title>OffPeak — run your home when power is cheap · Atsumi Labs</title>
+  <meta name="description" content="OffPeak tracks ComEd's live and day-ahead electricity prices and tells you when power is cheap or about to spike — so you can run the dryer, charge the car, and shave money off your bill. By Atsumi Labs." />
+  <link rel="canonical" href="https://atsumilabs.com/offpeak.html" />
+  <meta name="robots" content="index, follow" />
+  <meta name="theme-color" content="#f4ede1" />
+
+  <!-- Open Graph / Twitter -->
+  <meta property="og:type" content="website" />
+  <meta property="og:site_name" content="Atsumi Labs" />
+  <meta property="og:title" content="OffPeak — run your home when power is cheap" />
+  <meta property="og:description" content="Live ComEd electricity prices, day-ahead rates, and alerts so you run flexible loads when power is cheapest." />
+  <meta property="og:url" content="https://atsumilabs.com/offpeak.html" />
+  <meta property="og:image" content="https://atsumilabs.com/assets/og-offpeak.png" />
+  <meta property="og:image:width" content="1200" />
+  <meta property="og:image:height" content="630" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="OffPeak — run your home when power is cheap" />
+  <meta name="twitter:description" content="Live ComEd electricity prices, day-ahead rates, and alerts so you run flexible loads when power is cheapest." />
+  <meta name="twitter:image" content="https://atsumilabs.com/assets/og-offpeak.png" />
+
+  <script type="application/ld+json">
+  {"@context":"https://schema.org","@type":"SoftwareApplication","name":"OffPeak","applicationCategory":"UtilitiesApplication","operatingSystem":"Web, iOS, Android","offers":{"@type":"Offer","price":"0","priceCurrency":"USD"},"url":"https://atsumilabs.com/offpeak.html","description":"Live and day-ahead ComEd electricity prices with alerts, so you run flexible loads when power is cheapest.","publisher":{"@type":"Organization","name":"Atsumi Labs LLC","url":"https://atsumilabs.com/"}}
+  </script>
+
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Crect x='6' y='6' width='88' height='88' rx='18' fill='%23d8472b'/%3E%3Ctext x='50' y='72' font-size='62' text-anchor='middle' fill='%23f3ece1' font-family='serif'%3E%E9%9B%86%3C/text%3E%3C/svg%3E" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,500;0,9..144,600;1,9..144,400&family=Hanken+Grotesk:wght@400;500;600;700&family=Spline+Sans+Mono:wght@400;500&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css?v=2" />
+  <link rel="stylesheet" href="offpeak.css?v=2" />
+</head>
+<body>
+  <svg class="grain" aria-hidden="true"><filter id="n"><feTurbulence type="fractalNoise" baseFrequency="0.8" numOctaves="2" stitchTiles="stitch"/></filter><rect width="100%" height="100%" filter="url(#n)"/></svg>
+
+  <header class="site-head">
+    <a class="brand" href="index.html" aria-label="Atsumi Labs home">
+      <span class="seal" aria-hidden="true">集</span>
+      <span class="wordmark">Atsumi&nbsp;Labs</span>
+    </a>
+    <nav class="nav">
+      <a href="index.html#work">Work</a>
+      <a href="index.html#about">About</a>
+      <a href="index.html#contact">Contact</a>
+    </nav>
+  </header>
+
+  <main>
+    <!-- ───────────── hero ───────────── -->
+    <section class="op-hero">
+      <p class="eyebrow reveal" style="--d:0ms">
+        <a class="op-crumb" href="index.html#work">← The Collection</a> &nbsp;·&nbsp; No. 04
+      </p>
+      <h1 class="reveal" style="--d:80ms">OffPeak</h1>
+      <p class="op-tagline reveal" style="--d:160ms">
+        Run your home when power is <span class="savings">cheap.</span>
+      </p>
+      <p class="op-lede reveal" style="--d:260ms">
+        OffPeak watches ComEd&rsquo;s real-time and day-ahead electricity prices and tells you,
+        plainly, when power is cheap and when it&rsquo;s about to spike — so you can run the
+        dryer, charge the car, or hold off, and shave real money off a variable-rate bill.
+      </p>
+      <div class="op-cta reveal" style="--d:360ms">
+        <span class="badge-soon">Web · iOS · Android — launching soon</span>
+      </div>
+    </section>
+
+    <!-- ───────────── browser-framed live app ───────────── -->
+    <div class="op-browser-wrap reveal" style="--d:240ms">
+      <div class="op-glow" aria-hidden="true"></div>
+      <!-- data-app-url: where the live OffPeak web app is hosted.
+           Override at runtime for testing with ?app=<url> in the page URL. -->
+      <div class="op-browser">
+        <div class="op-bar" aria-hidden="true">
+          <div class="op-dots"><i></i><i></i><i></i></div>
+          <div class="op-addr">offpeak.atsumilabs.com</div>
+        </div>
+        <div class="op-screen" id="op-screen" data-app-url="https://offpeak.atsumilabs.com/">
+          <img class="op-poster" src="assets/offpeak-screen.png"
+               alt="OffPeak dashboard — current ComEd price and today's price chart" />
+          <span class="live-pill" aria-hidden="true"><i></i>live</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- ───────────── savings spotlight ───────────── -->
+    <section class="op-spotlight">
+      <div class="op-spot-inner">
+        <div class="op-spot-copy">
+          <span class="op-spot-eyebrow">◖ Smart timing</span>
+          <h2>Spend less by running<br />your home off-peak.</h2>
+          <p>
+            Wholesale electricity can swing from a couple of cents to over 30&cent; a kWh in
+            the same day. OffPeak reads ComEd&rsquo;s <strong>live</strong> and
+            <strong>day-ahead</strong> prices, finds the cheap windows, and warns you before a
+            spike — so the dishwasher, EV, and laundry run when energy is at its cheapest.
+          </p>
+          <p class="op-spot-quote">&ldquo;Cheap right now — good time to run the dryer.&rdquo;</p>
+          <p>Small, automatic timing decisions that quietly add up on a variable-rate plan.</p>
+        </div>
+        <div class="meter" aria-hidden="true">
+          <span style="height:34%"></span><span style="height:26%"></span><span style="height:40%"></span>
+          <span class="lo" style="height:22%"></span><span style="height:48%"></span>
+          <span style="height:64%"></span><span class="hi" style="height:96%"></span><span style="height:70%"></span>
+        </div>
+      </div>
+    </section>
+
+    <!-- ───────────── features ───────────── -->
+    <section class="op-features">
+      <div class="section-head">
+        <span class="sec-label">Inside OffPeak</span>
+        <h2>Know what power costs,<br />right now and next.</h2>
+      </div>
+      <div class="op-feat-grid">
+        <article class="op-feat">
+          <span class="op-feat-mark">⌁</span>
+          <h3>Live &amp; day-ahead</h3>
+          <p>ComEd&rsquo;s real-time 5-minute rate and tomorrow&rsquo;s hourly day-ahead prices, side by side.</p>
+        </article>
+        <article class="op-feat">
+          <span class="op-feat-mark">↯</span>
+          <h3>Spike &amp; dip alerts</h3>
+          <p>Get pinged the moment prices cross your threshold, so you never run a big load at peak by accident.</p>
+        </article>
+        <article class="op-feat">
+          <span class="op-feat-mark">◷</span>
+          <h3>Cheapest windows</h3>
+          <p>OffPeak highlights the cheapest hours of the day for laundry, the dishwasher, and EV charging.</p>
+        </article>
+        <article class="op-feat">
+          <span class="op-feat-mark">＄</span>
+          <h3>Real savings</h3>
+          <p>Shifting flexible loads to off-peak hours can meaningfully cut a variable-rate electricity bill.</p>
+        </article>
+        <article class="op-feat">
+          <span class="op-feat-mark">◫</span>
+          <h3>Web, then everywhere</h3>
+          <p>A full-screen web app today, with native iOS and Android on the way — same data, same alerts.</p>
+        </article>
+        <article class="op-feat">
+          <span class="op-feat-mark">＋</span>
+          <h3>More utilities to come</h3>
+          <p>ComEd (northern Illinois) first, built to add more real-time-pricing utilities over time.</p>
+        </article>
+      </div>
+      <p class="op-attribution">
+        Pricing data from ComEd&rsquo;s hourly pricing program. OffPeak is an independent app
+        and is not affiliated with or endorsed by ComEd or Exelon. Prices shown are
+        informational and may be delayed; check your utility for billing rates.
+      </p>
+    </section>
+  </main>
+
+  <footer class="op-foot">
+    <div class="op-foot-brand">
+      <span class="seal" aria-hidden="true">集</span>
+      <div>
+        <strong>OffPeak</strong>
+        <span>An app by Atsumi Labs LLC</span>
+      </div>
+    </div>
+    <nav class="op-foot-nav">
+      <a href="index.html">Atsumi Labs</a>
+      <a href="offpeak-privacy.html">Privacy</a>
+      <a href="offpeak-terms.html">Terms</a>
+      <a href="mailto:contact@atsumilabs.com">Contact</a>
+    </nav>
+    <p class="copy">© 2026 Atsumi Labs LLC. Electricity pricing data courtesy of ComEd&rsquo;s hourly pricing program.</p>
+  </footer>
+
+  <script>
+    // Embed the live OffPeak web app in the browser frame. Poster shows instantly;
+    // the app lazy-loads once reachable, then cross-fades in. Retries for a few
+    // minutes so an open tab upgrades itself when the app goes live.
+    (function () {
+      var screen = document.getElementById('op-screen');
+      if (!screen) return;
+      var override = new URLSearchParams(location.search).get('app');
+      var url = override || screen.dataset.appUrl;
+      if (!url) return;
+
+      var mounted = false;
+      function mount() {
+        if (mounted) return;
+        mounted = true;
+        var frame = document.createElement('iframe');
+        frame.className = 'op-frame';
+        frame.src = url;
+        frame.title = 'OffPeak — live web app';
+        frame.allow = 'fullscreen';
+        frame.referrerPolicy = 'no-referrer-when-downgrade';
+        frame.addEventListener('load', function () { screen.classList.add('is-live'); });
+        screen.insertBefore(frame, screen.firstChild);
+      }
+
+      var tries = 0;
+      function check() {
+        if (mounted) return;
+        fetch(url, { mode: 'no-cors', cache: 'no-store' })
+          .then(function () { mount(); })
+          .catch(function () { if (++tries < 24) setTimeout(check, 15000); });
+      }
+
+      if ('IntersectionObserver' in window) {
+        var io = new IntersectionObserver(function (entries) {
+          entries.forEach(function (e) { if (e.isIntersecting) { check(); io.disconnect(); } });
+        }, { rootMargin: '200px' });
+        io.observe(screen);
+      } else {
+        check();
+      }
+    })();
+  </script>
+</body>
+</html>

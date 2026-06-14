@@ -19,7 +19,7 @@ assets/               images (skyfield-screen.png = phone-frame poster)
 ```
 
 Products in the catalog: **Skyfield** (weather), **AliasNest** (email aliases),
-**Tadka Play** (party games), **ComEd PricePulse** (electricity prices).
+**Tadka Play** (party games), **OffPeak** (ComEd electricity prices).
 
 ## Preview locally
 ```bash
