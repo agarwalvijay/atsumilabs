@@ -21,6 +21,7 @@ const TYPES = {
   ".ico": "image/x-icon",
   ".woff2": "font/woff2",
   ".txt": "text/plain; charset=utf-8",
+  ".xml": "application/xml; charset=utf-8",
   ".webmanifest": "application/manifest+json",
 };
 
@@ -57,8 +58,9 @@ const server = http.createServer((req, res) => {
     }
     const ext = path.extname(filePath).toLowerCase();
     const type = TYPES[ext] || "application/octet-stream";
-    // Long cache for static assets, no-cache for HTML so updates show immediately.
-    const cache = ext === ".html" ? "no-cache" : "public, max-age=86400";
+    // HTML/CSS/JS revalidate so edits show immediately; images/fonts cache long.
+    const revalidate = ext === ".html" || ext === ".css" || ext === ".js";
+    const cache = revalidate ? "no-cache" : "public, max-age=604800";
     fs.createReadStream(filePath)
       .on("open", () => res.writeHead(200, { "Content-Type": type, "Cache-Control": cache }))
       .on("error", () => send(res, 500, "Server error"))
