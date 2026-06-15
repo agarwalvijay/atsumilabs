@@ -121,6 +121,79 @@
       </div>
     </section>
 
+    <!-- ───────────── coverage map ───────────── -->
+    <section class="op-coverage">
+      <div class="op-cov-head">
+        <span class="sec-label">Coverage</span>
+        <h2>Live in the markets that<br />price power in real time.</h2>
+        <p>OffPeak follows the organized U.S. wholesale electricity markets — the regions where prices actually move minute to minute. ComEd was first; coverage now spans seven grid operators across most of the country.</p>
+      </div>
+
+      <!-- US tile-grid map (schematic; covered = green). -->
+      <div class="op-map" role="img" aria-label="Map of the United States showing OffPeak coverage across the organized wholesale electricity markets — most of the country except the non-market Southeast and the West outside California.">
+        <span class="tile" style="--r:1;--c:1">AK</span>
+        <span class="tile on" style="--r:1;--c:11">ME</span>
+        <span class="tile on" style="--r:2;--c:10">VT</span>
+        <span class="tile on" style="--r:2;--c:11">NH</span>
+        <span class="tile" style="--r:3;--c:1">WA</span>
+        <span class="tile" style="--r:3;--c:2">ID</span>
+        <span class="tile" style="--r:3;--c:3">MT</span>
+        <span class="tile on" style="--r:3;--c:4">ND</span>
+        <span class="tile on" style="--r:3;--c:5">MN</span>
+        <span class="tile on" style="--r:3;--c:6">WI</span>
+        <span class="tile on" style="--r:3;--c:8">MI</span>
+        <span class="tile on" style="--r:3;--c:9">NY</span>
+        <span class="tile on" style="--r:3;--c:10">RI</span>
+        <span class="tile on" style="--r:3;--c:11">MA</span>
+        <span class="tile" style="--r:4;--c:1">OR</span>
+        <span class="tile" style="--r:4;--c:2">NV</span>
+        <span class="tile" style="--r:4;--c:3">WY</span>
+        <span class="tile on" style="--r:4;--c:4">SD</span>
+        <span class="tile on" style="--r:4;--c:5">IA</span>
+        <span class="tile on" style="--r:4;--c:6">IL</span>
+        <span class="tile on" style="--r:4;--c:7">IN</span>
+        <span class="tile on" style="--r:4;--c:8">OH</span>
+        <span class="tile on" style="--r:4;--c:9">PA</span>
+        <span class="tile on" style="--r:4;--c:10">NJ</span>
+        <span class="tile on" style="--r:4;--c:11">CT</span>
+        <span class="tile on" style="--r:5;--c:1">CA</span>
+        <span class="tile" style="--r:5;--c:2">UT</span>
+        <span class="tile" style="--r:5;--c:3">CO</span>
+        <span class="tile on" style="--r:5;--c:4">NE</span>
+        <span class="tile on" style="--r:5;--c:5">MO</span>
+        <span class="tile on" style="--r:5;--c:6">KY</span>
+        <span class="tile on" style="--r:5;--c:7">WV</span>
+        <span class="tile on" style="--r:5;--c:8">VA</span>
+        <span class="tile on" style="--r:5;--c:9">MD</span>
+        <span class="tile on" style="--r:5;--c:10">DE</span>
+        <span class="tile" style="--r:6;--c:2">AZ</span>
+        <span class="tile" style="--r:6;--c:3">NM</span>
+        <span class="tile on" style="--r:6;--c:4">KS</span>
+        <span class="tile on" style="--r:6;--c:5">AR</span>
+        <span class="tile" style="--r:6;--c:6">TN</span>
+        <span class="tile" style="--r:6;--c:7">NC</span>
+        <span class="tile" style="--r:6;--c:8">SC</span>
+        <span class="tile on" style="--r:6;--c:9">DC</span>
+        <span class="tile on" style="--r:7;--c:4">OK</span>
+        <span class="tile on" style="--r:7;--c:5">LA</span>
+        <span class="tile on" style="--r:7;--c:6">MS</span>
+        <span class="tile" style="--r:7;--c:7">AL</span>
+        <span class="tile" style="--r:7;--c:8">GA</span>
+        <span class="tile" style="--r:8;--c:1">HI</span>
+        <span class="tile on" style="--r:8;--c:4">TX</span>
+        <span class="tile" style="--r:8;--c:9">FL</span>
+      </div>
+
+      <!-- SOURCE OF TRUTH for OffPeak's supported markets. To add a market:
+           (1) add its <li> here, (2) flip the relevant state tile(s) above to
+           "tile on", (3) bump the "N U.S. markets" count on index.html. -->
+      <ul class="op-legend">
+        <li>ComEd</li><li>PJM</li><li>MISO</li><li>SPP</li>
+        <li>ERCOT</li><li>CAISO</li><li>NYISO</li><li>ISO-NE</li>
+      </ul>
+      <p class="op-cov-note">Schematic map. Real-time pricing follows market (RTO/ISO) boundaries, which don&rsquo;t always match state lines, so availability can vary within a state. More markets coming.</p>
+    </section>
+
     <!-- ───────────── features ───────────── -->
     <section class="op-features">
       <div class="section-head">
@@ -156,9 +229,7 @@
         <article class="op-feat">
           <span class="op-feat-mark">＋</span>
           <h3>Multiple markets</h3>
-          <!-- OffPeak market list — SOURCE OF TRUTH #2 (the other is the chip on
-               index.html's OffPeak card). When adding a market, edit only these two. -->
-          <p>ComEd (Illinois), CAISO (California), ERCOT (Texas), and ISO-NE (New England) today, built to add more real-time-pricing markets over time.</p>
+          <p>From ComEd to seven U.S. grid operators coast to coast — see the coverage map above. Built to add more over time.</p>
         </article>
       </div>
       <p class="op-attribution">
