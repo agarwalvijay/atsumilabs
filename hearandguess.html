@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <!-- Google Analytics (GA4) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-JYN40ZXBK0"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-JYN40ZXBK0');
+  </script>
+
+  <title>Hear and Guess — a Spotify music quiz party game · Atsumi Labs</title>
+  <meta name="description" content="Hear and Guess is a multiplayer music quiz: put any Spotify playlist on the big screen and race to name the track on your phone. Real-time buzzers, QR join, speed-based scoring. By Atsumi Labs." />
+  <link rel="canonical" href="https://atsumilabs.com/hearandguess.html" />
+  <meta name="robots" content="index, follow" />
+  <meta name="theme-color" content="#f4ede1" />
+
+  <!-- Open Graph / Twitter -->
+  <meta property="og:type" content="website" />
+  <meta property="og:site_name" content="Atsumi Labs" />
+  <meta property="og:title" content="Hear and Guess — a Spotify music quiz party game" />
+  <meta property="og:description" content="Put any Spotify playlist on the big screen and race to name the track on your phone. Real-time buzzers, QR join, speed-based scoring." />
+  <meta property="og:url" content="https://atsumilabs.com/hearandguess.html" />
+  <meta property="og:image" content="https://atsumilabs.com/assets/og-hearandguess.png" />
+  <meta property="og:image:width" content="1200" />
+  <meta property="og:image:height" content="630" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Hear and Guess — a Spotify music quiz party game" />
+  <meta name="twitter:description" content="Put any Spotify playlist on the big screen and race to name the track on your phone." />
+  <meta name="twitter:image" content="https://atsumilabs.com/assets/og-hearandguess.png" />
+
+  <script type="application/ld+json">
+  {"@context":"https://schema.org","@type":"SoftwareApplication","name":"Hear and Guess","applicationCategory":"GameApplication","operatingSystem":"Web","offers":{"@type":"Offer","price":"0","priceCurrency":"USD"},"url":"https://atsumilabs.com/hearandguess.html","description":"A multiplayer music quiz: host a Spotify playlist on the big screen, players buzz in on their phones to name the track, fastest correct answer wins.","publisher":{"@type":"Organization","name":"Atsumi Labs LLC","url":"https://atsumilabs.com/"}}
+  </script>
+
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Crect x='6' y='6' width='88' height='88' rx='18' fill='%23d8472b'/%3E%3Ctext x='50' y='72' font-size='62' text-anchor='middle' fill='%23f3ece1' font-family='serif'%3E%E9%9B%86%3C/text%3E%3C/svg%3E" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,500;0,9..144,600;1,9..144,400&family=Hanken+Grotesk:wght@400;500;600;700&family=Spline+Sans+Mono:wght@400;500&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css?v=2" />
+  <link rel="stylesheet" href="hearandguess.css?v=2" />
+</head>
+<body>
+  <svg class="grain" aria-hidden="true"><filter id="n"><feTurbulence type="fractalNoise" baseFrequency="0.8" numOctaves="2" stitchTiles="stitch"/></filter><rect width="100%" height="100%" filter="url(#n)"/></svg>
+
+  <header class="site-head">
+    <a class="brand" href="index.html" aria-label="Atsumi Labs home">
+      <span class="seal" aria-hidden="true">集</span>
+      <span class="wordmark">Atsumi&nbsp;Labs</span>
+    </a>
+    <nav class="nav">
+      <a href="index.html#work">Work</a>
+      <a href="index.html#about">About</a>
+      <a href="index.html#contact">Contact</a>
+    </nav>
+  </header>
+
+  <main>
+    <!-- ───────────── hero ───────────── -->
+    <section class="hag-hero">
+      <p class="eyebrow reveal" style="--d:0ms">
+        <a class="hag-crumb" href="index.html#work">← The Collection</a> &nbsp;·&nbsp; No. 05
+      </p>
+      <h1 class="reveal" style="--d:80ms">Hear and Guess</h1>
+      <p class="hag-tagline reveal" style="--d:160ms">
+        Name that <span class="hag-accent">tune.</span>
+      </p>
+      <p class="hag-lede reveal" style="--d:260ms">
+        Put any Spotify playlist on the big screen and let the room race to name the track.
+        Players buzz in on their phones, server-side timing keeps it fair, and the fastest
+        correct answer takes the round.
+      </p>
+      <div class="hag-cta reveal" style="--d:360ms">
+        <span class="badge-live">Live — try it in the frame</span>
+      </div>
+      <ul class="chips hag-hero-chips reveal" style="--d:440ms">
+        <li>Spotify playlists</li><li>Real-time buzzers</li><li>QR join</li><li>Free to play</li>
+      </ul>
+    </section>
+
+    <!-- ───────────── browser-framed live app ───────────── -->
+    <div class="hag-browser-wrap reveal" style="--d:240ms">
+      <div class="hag-glow" aria-hidden="true"></div>
+      <!-- data-app-url: where the live Hear and Guess app is hosted.
+           Override at runtime for testing with ?app=<url> in the page URL. -->
+      <div class="hag-browser">
+        <div class="hag-bar" aria-hidden="true">
+          <div class="hag-dots"><i></i><i></i><i></i></div>
+          <div class="hag-addr">hearandguess.com</div>
+        </div>
+        <div class="hag-screen" id="hag-screen" data-app-url="https://hearandguess.com/">
+          <img class="hag-poster" src="assets/hearandguess-screen.png"
+               alt="Hear and Guess quiz-master screen — connect Spotify to host a music quiz" />
+          <span class="live-pill" aria-hidden="true"><i></i>live</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- ───────────── how it works ───────────── -->
+    <section class="hag-how">
+      <div class="hag-how-inner">
+        <div class="hag-how-head">
+          <div>
+            <span class="hag-how-eyebrow">◖ How it works</span>
+            <h2>Big screen. Everyone&rsquo;s phones.</h2>
+          </div>
+          <div class="eq" aria-hidden="true"><span></span><span></span><span></span><span></span><span></span><span></span></div>
+        </div>
+        <div class="hag-steps">
+          <div class="hag-step">
+            <span class="n">01</span>
+            <h3>Host a playlist</h3>
+            <p>Connect Spotify, pick any playlist, and cast the quiz to the big screen.</p>
+          </div>
+          <div class="hag-step">
+            <span class="n">02</span>
+            <h3>Players buzz in</h3>
+            <p>Everyone joins with a QR code or a 5-letter room code and races to name the song on their phone.</p>
+          </div>
+          <div class="hag-step">
+            <span class="n">03</span>
+            <h3>Fastest wins</h3>
+            <p>Server-side timing scores speed, wrong guesses can cost points, and playback auto-pauses on every buzz.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ───────────── note ───────────── -->
+    <section class="hag-note-sec">
+      <p class="hag-note">
+        Anyone can play — no account needed. <strong>Hosting</strong> needs a Spotify Premium
+        account we approve, since Spotify caps new apps until it grants full access.
+        <a href="mailto:contact@atsumilabs.com?subject=Hear%20and%20Guess%20host%20access" target="_blank" rel="noopener">Ask us to be added as a host.</a>
+      </p>
+    </section>
+  </main>
+
+  <footer class="hag-foot">
+    <div class="hag-foot-brand">
+      <span class="seal" aria-hidden="true">集</span>
+      <div>
+        <strong>Hear and Guess</strong>
+        <span>A game by Atsumi Labs LLC</span>
+      </div>
+    </div>
+    <nav class="hag-foot-nav">
+      <a href="index.html">Atsumi Labs</a>
+      <a href="https://hearandguess.com/how-to-play" target="_blank" rel="noopener">How to play</a>
+      <a href="https://hearandguess.com/privacy" target="_blank" rel="noopener">Privacy</a>
+      <a href="https://hearandguess.com/terms" target="_blank" rel="noopener">Terms</a>
+      <a href="mailto:contact@atsumilabs.com" target="_blank" rel="noopener">Contact</a>
+    </nav>
+    <p class="copy">© 2026 Atsumi Labs LLC. Music playback and metadata via Spotify; Hear and Guess is not affiliated with or endorsed by Spotify.</p>
+  </footer>
+
+  <script>
+    // Embed the live Hear and Guess app in the browser frame. Poster shows
+    // instantly; the app lazy-loads once reachable, then cross-fades in.
+    (function () {
+      var screen = document.getElementById('hag-screen');
+      if (!screen) return;
+      var override = new URLSearchParams(location.search).get('app');
+      var url = override || screen.dataset.appUrl;
+      if (!url) return;
+
+      var mounted = false;
+      function mount() {
+        if (mounted) return;
+        mounted = true;
+        var frame = document.createElement('iframe');
+        frame.className = 'hag-frame';
+        frame.src = url;
+        frame.title = 'Hear and Guess — live web app';
+        frame.allow = 'fullscreen';
+        frame.referrerPolicy = 'no-referrer-when-downgrade';
+        frame.addEventListener('load', function () { screen.classList.add('is-live'); });
+        screen.insertBefore(frame, screen.firstChild);
+      }
+
+      var tries = 0;
+      function check() {
+        if (mounted) return;
+        fetch(url, { mode: 'no-cors', cache: 'no-store' })
+          .then(function () { mount(); })
+          .catch(function () { if (++tries < 24) setTimeout(check, 15000); });
+      }
+
+      if ('IntersectionObserver' in window) {
+        var io = new IntersectionObserver(function (entries) {
+          entries.forEach(function (e) { if (e.isIntersecting) { check(); io.disconnect(); } });
+        }, { rootMargin: '200px' });
+        io.observe(screen);
+      } else {
+        check();
+      }
+    })();
+  </script>
+</body>
+</html>
