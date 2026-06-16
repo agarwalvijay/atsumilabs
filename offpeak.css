@@ -141,7 +141,11 @@
   font-family: var(--mono); font-size: clamp(0.5rem, 1.1vw, 0.66rem); font-weight: 500;
   background: rgba(33, 27, 22, 0.05); color: var(--ink-3);
   border: 1px solid var(--line-2);
+  /* tiles scale roughly by state land area (big states fill the cell). */
+  transform: scale(var(--s, 0.8));
 }
+.tile.lg { --s: 1; }
+.tile.sm { --s: 0.6; }
 .tile.on { background: #2f7d4f; color: #f4ede1; border-color: transparent; }
 
 .op-legend {
