@@ -23,7 +23,7 @@
 }
 .savings { color: #2f7d4f; font-style: italic; }
 .op-lede { color: var(--ink-2); font-size: clamp(1rem, 1.5vw, 1.12rem); max-width: 60ch; margin: 0 auto; }
-.op-cta { margin: 1.8rem 0 0.4rem; }
+.op-cta { margin: 1.8rem 0 0.4rem; display: flex; flex-wrap: wrap; justify-content: center; align-items: center; gap: 0.9rem; }
 .op-hero-chips { justify-content: center; margin: 1.4rem auto 0; }
 
 /* status badges */

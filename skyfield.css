@@ -24,7 +24,7 @@
 }
 .sky-lede { color: var(--ink-2); font-size: clamp(1rem, 1.5vw, 1.12rem); max-width: 50ch; }
 
-.sky-cta { margin: 1.8rem 0 1.6rem; }
+.sky-cta { margin: 1.8rem 0 1rem; display: flex; flex-wrap: wrap; align-items: center; gap: 0.9rem; }
 .badge-soon {
   display: inline-flex; align-items: center; gap: 0.55rem;
   font-family: var(--mono); font-size: 0.8rem; letter-spacing: 0.04em;
