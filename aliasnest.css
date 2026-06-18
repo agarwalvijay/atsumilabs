@@ -1,8 +1,8 @@
 /* ============================================================
    AliasNest showcase — access-controlled web app (static preview).
-   Atsumi paper theme (inherits styles.css vars); teal accent.
+   Atsumi paper theme; vermillion/washi accent to match AliasNest's
+   own brand. The framed screenshot already carries its browser chrome.
    ============================================================ */
-:root { --an: #0c8276; --an-bright: #14b8a6; --an-soft: rgba(20, 184, 166, 0.12); }
 
 /* ── hero (centered) ── */
 .an-hero { max-width: 1080px; margin: 0 auto; text-align: center; padding: clamp(3rem, 9vh, 6rem) clamp(1.2rem, 5vw, 3rem) clamp(1.5rem, 4vh, 2.5rem); }
@@ -10,7 +10,7 @@
 .an-crumb:hover { color: var(--shu-deep); border-color: var(--shu-deep); }
 .an-hero h1 { font-family: var(--serif); font-weight: 500; font-size: clamp(2.6rem, 7vw, 5rem); line-height: 1; letter-spacing: -0.03em; margin: 0.6rem 0 0.8rem; }
 .an-tagline { font-family: var(--serif); font-weight: 400; font-size: clamp(1.3rem, 2.6vw, 1.9rem); line-height: 1.25; letter-spacing: -0.01em; color: var(--ink); max-width: 25ch; margin: 0 auto 1.1rem; }
-.an-accent { color: var(--an); font-style: italic; }
+.an-accent { color: var(--shu); font-style: italic; }
 .an-lede { color: var(--ink-2); font-size: clamp(1rem, 1.5vw, 1.12rem); max-width: 58ch; margin: 0 auto; }
 .an-cta { margin: 1.8rem 0 0.4rem; display: flex; flex-wrap: wrap; justify-content: center; align-items: center; gap: 0.9rem; }
 .badge-beta {
@@ -20,47 +20,41 @@
 .badge-beta::before { content: ""; width: 8px; height: 8px; border-radius: 50%; background: var(--shu); }
 .an-hero-chips { justify-content: center; margin: 1.4rem auto 0; }
 
-/* ── browser window frame (static — no live embed) ── */
-.an-browser-wrap { position: relative; max-width: 1040px; margin: 0 auto; padding: 0 clamp(1.2rem, 5vw, 3rem); }
-.an-glow { position: absolute; z-index: 0; left: 50%; top: 30%; transform: translateX(-50%); width: 70%; height: 60%; background: radial-gradient(closest-side, rgba(20,184,166,0.20), transparent 70%); filter: blur(28px); pointer-events: none; }
-.an-browser {
-  position: relative; z-index: 1; border-radius: 14px; overflow: hidden; border: 1px solid var(--line);
-  background: #0a0f12; box-shadow: 0 40px 90px -38px rgba(33,27,22,0.55), 0 10px 26px -18px rgba(33,27,22,0.4);
-  transform: translateZ(0); isolation: isolate; transition: transform 0.4s cubic-bezier(.2,.7,.3,1), box-shadow 0.4s ease;
+/* ── framed screenshot (static; the image carries its own browser chrome) ── */
+.an-shot-wrap { position: relative; max-width: 1040px; margin: 0 auto; padding: 0 clamp(1.2rem, 5vw, 3rem); }
+.an-glow { position: absolute; z-index: 0; left: 50%; top: 28%; transform: translateX(-50%); width: 72%; height: 60%; background: radial-gradient(closest-side, rgba(216,71,43,0.14), transparent 70%); filter: blur(30px); pointer-events: none; }
+.an-shot {
+  position: relative; z-index: 1; border-radius: 16px; overflow: hidden; border: 1px solid var(--line);
+  box-shadow: 0 40px 90px -40px rgba(33,27,22,0.5), 0 10px 26px -18px rgba(33,27,22,0.35);
+  transition: transform 0.4s cubic-bezier(.2,.7,.3,1), box-shadow 0.4s ease;
 }
-.an-browser:hover { transform: translateY(-4px); box-shadow: 0 50px 100px -38px rgba(33,27,22,0.6); }
-.an-bar { height: 44px; display: flex; align-items: center; gap: 12px; padding: 0 16px; background: #070b0d; border-bottom: 1px solid rgba(230,240,238,0.08); }
-.an-dots { display: flex; gap: 8px; }
-.an-dots i { width: 12px; height: 12px; border-radius: 50%; display: block; }
-.an-dots i:nth-child(1) { background: #ff5f57; } .an-dots i:nth-child(2) { background: #febc2e; } .an-dots i:nth-child(3) { background: #28c840; }
-.an-addr { flex: 1; max-width: 440px; margin: 0 auto; text-align: center; background: rgba(230,240,238,0.06); border-radius: 7px; padding: 6px 14px; font-family: var(--mono); font-size: 0.78rem; color: #8fb1ab; }
-.an-screen { position: relative; aspect-ratio: 16 / 10; background: #0a0f12; overflow: hidden; }
-.an-poster { width: 100%; height: 100%; object-fit: cover; object-position: top center; display: block; }
+.an-shot:hover { transform: translateY(-4px); box-shadow: 0 52px 100px -40px rgba(33,27,22,0.55); }
+.an-poster { display: block; width: 100%; height: auto; }
 .lock-pill {
-  position: absolute; top: 12px; right: 12px; z-index: 4; display: inline-flex; align-items: center; gap: 0.4rem;
+  position: absolute; top: 16px; right: 16px; z-index: 4; display: inline-flex; align-items: center; gap: 0.4rem;
   font-family: var(--mono); font-size: 0.62rem; letter-spacing: 0.1em; text-transform: uppercase;
-  color: #cfe6e1; background: rgba(10,15,18,0.6); backdrop-filter: blur(6px); border: 1px solid rgba(255,255,255,0.16); border-radius: 999px; padding: 0.25rem 0.6rem;
+  color: var(--ink-2); background: rgba(244,237,225,0.82); backdrop-filter: blur(6px); border: 1px solid var(--line); border-radius: 999px; padding: 0.28rem 0.62rem;
 }
 .an-poster-cap { text-align: center; font-family: var(--mono); font-size: 0.74rem; color: var(--ink-3); margin-top: 0.9rem; }
 
-/* ── how it works (dark teal band) ── */
+/* ── how it works (dark sumi band, vermillion accents) ── */
 .an-how { max-width: var(--maxw); margin: clamp(2.5rem, 7vh, 5rem) auto; padding: 0 clamp(1.2rem, 5vw, 3rem); }
 .an-how-inner {
   position: relative; overflow: hidden;
-  background: radial-gradient(120% 120% at 0% 0%, rgba(20,184,166,0.22), transparent 55%), radial-gradient(90% 90% at 100% 100%, rgba(216,71,43,0.12), transparent 60%), #0a0f12;
-  color: #e6f0ee; border-radius: 26px; padding: clamp(2rem, 5vw, 3.4rem); box-shadow: 0 30px 70px -34px rgba(10,15,18,0.7);
+  background: radial-gradient(120% 120% at 0% 0%, rgba(216,71,43,0.20), transparent 55%), radial-gradient(90% 90% at 100% 100%, rgba(150,120,70,0.14), transparent 60%), #1b1613;
+  color: #f1e9dd; border-radius: 26px; padding: clamp(2rem, 5vw, 3.4rem); box-shadow: 0 30px 70px -34px rgba(27,22,19,0.7);
 }
-.an-how-eyebrow { font-family: var(--mono); font-size: 0.78rem; letter-spacing: 0.16em; text-transform: uppercase; color: #5ed6c7; }
+.an-how-eyebrow { font-family: var(--mono); font-size: 0.78rem; letter-spacing: 0.16em; text-transform: uppercase; color: #ff9a7a; }
 .an-how h2 { font-family: var(--serif); font-weight: 500; color: #fff; font-size: clamp(1.8rem, 4vw, 2.7rem); line-height: 1.04; letter-spacing: -0.02em; margin: 0.5rem 0 2rem; }
 .an-steps { display: grid; grid-template-columns: repeat(4, 1fr); gap: 1.4rem; }
-.an-step .n { display: inline-grid; place-items: center; width: 2rem; height: 2rem; border-radius: 8px; background: var(--an-soft); color: #5ed6c7; font-family: var(--mono); font-size: 0.85rem; margin-bottom: 0.7rem; }
+.an-step .n { display: inline-grid; place-items: center; width: 2rem; height: 2rem; border-radius: 8px; background: rgba(216,71,43,0.18); color: #ff9a7a; font-family: var(--mono); font-size: 0.85rem; margin-bottom: 0.7rem; }
 .an-step h3 { font-family: var(--serif); font-weight: 600; color: #fff; font-size: 1.12rem; margin-bottom: 0.25rem; }
-.an-step p { color: rgba(230,240,238,0.68); font-size: 0.9rem; }
+.an-step p { color: rgba(241,233,221,0.68); font-size: 0.9rem; }
 
 /* ── on-prem callout ── */
 .an-onprem { max-width: var(--maxw); margin: 0 auto; padding: clamp(1rem, 3vh, 2rem) clamp(1.2rem, 5vw, 3rem); }
-.an-onprem-inner { display: grid; grid-template-columns: auto 1fr; gap: 1.4rem; align-items: center; background: var(--paper-2); border: 1px solid var(--line); border-left: 3px solid var(--an); border-radius: 16px; padding: 1.6rem 1.8rem; }
-.an-onprem .mark { font-size: 1.8rem; color: var(--an); }
+.an-onprem-inner { display: grid; grid-template-columns: auto 1fr; gap: 1.4rem; align-items: center; background: var(--paper-2); border: 1px solid var(--line); border-left: 3px solid var(--shu); border-radius: 16px; padding: 1.6rem 1.8rem; }
+.an-onprem .mark { font-size: 1.9rem; color: var(--shu-deep); }
 .an-onprem h3 { font-family: var(--serif); font-weight: 600; font-size: 1.25rem; margin-bottom: 0.25rem; }
 .an-onprem p { color: var(--ink-2); font-size: 0.96rem; max-width: 70ch; }
 
