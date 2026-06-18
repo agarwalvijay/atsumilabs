@@ -51,6 +51,12 @@
 .an-step h3 { font-family: var(--serif); font-weight: 600; color: #fff; font-size: 1.12rem; margin-bottom: 0.25rem; }
 .an-step p { color: rgba(241,233,221,0.68); font-size: 0.9rem; }
 
+/* ── mobile (secondary visual) ── */
+.an-mobile { max-width: var(--maxw); margin: clamp(2rem, 6vh, 4rem) auto 0; padding: 0 clamp(1.2rem, 5vw, 3rem); text-align: center; }
+.an-mobile h2 { font-family: var(--serif); font-weight: 500; font-size: clamp(1.9rem, 4.5vw, 3rem); line-height: 1.04; letter-spacing: -0.02em; margin: 0.7rem 0; }
+.an-mobile .lede2 { color: var(--ink-2); max-width: 54ch; margin: 0 auto; }
+.an-mobile-img { display: block; width: 100%; max-width: 760px; height: auto; margin: 1.6rem auto 0; }
+
 /* ── on-prem callout ── */
 .an-onprem { max-width: var(--maxw); margin: 0 auto; padding: clamp(1rem, 3vh, 2rem) clamp(1.2rem, 5vw, 3rem); }
 .an-onprem-inner { display: grid; grid-template-columns: auto 1fr; gap: 1.4rem; align-items: center; background: var(--paper-2); border: 1px solid var(--line); border-left: 3px solid var(--shu); border-radius: 16px; padding: 1.6rem 1.8rem; }
