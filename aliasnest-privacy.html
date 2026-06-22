@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <!-- Google Analytics (GA4) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-JYN40ZXBK0"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-JYN40ZXBK0');
+  </script>
+
+  <title>AliasNest — Privacy Policy · Atsumi Labs</title>
+  <meta name="description" content="AliasNest's privacy policy — what an email-aliasing and relay service necessarily handles (your account, aliases, and the mail sent to them), why, and the fact that you can self-host. An app by Atsumi Labs." />
+  <link rel="canonical" href="https://atsumilabs.com/aliasnest-privacy.html" />
+  <meta name="robots" content="index, follow" />
+  <meta name="theme-color" content="#f4ede1" />
+  <meta property="og:type" content="website" />
+  <meta property="og:site_name" content="Atsumi Labs" />
+  <meta property="og:title" content="AliasNest — Privacy Policy" />
+  <meta property="og:url" content="https://atsumilabs.com/aliasnest-privacy.html" />
+  <meta property="og:image" content="https://atsumilabs.com/assets/og-aliasnest.png" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Crect x='6' y='6' width='88' height='88' rx='18' fill='%23d8472b'/%3E%3Ctext x='50' y='72' font-size='62' text-anchor='middle' fill='%23f3ece1' font-family='serif'%3E%E9%9B%86%3C/text%3E%3C/svg%3E" />
+  <link rel="stylesheet" href="legal.css?v=2" />
+</head>
+<body>
+  <a class="home-btn" href="aliasnest.html" title="AliasNest" aria-label="AliasNest">集</a>
+  <main class="legal">
+    <p class="kicker">AliasNest · an app by Atsumi Labs LLC</p>
+    <h1>AliasNest Privacy Policy</h1>
+    <p class="updated">Last updated: 22 June 2026</p>
+
+    <p class="intro">AliasNest gives you masked email aliases and relays the mail sent to them. By its nature, that means AliasNest receives and stores email on your behalf. This policy explains what we hold, why, and how to keep it minimal — including running AliasNest entirely on your own infrastructure.</p>
+
+    <h2>What we collect</h2>
+    <p><strong>Your account.</strong> To sign in, AliasNest stores your account email address and a securely hashed password. We do not store your password in plain text.</p>
+    <p><strong>Aliases &amp; domains.</strong> The aliases (masks) you create, and any custom domains you add — including the DNS verification token and the MX/TXT records used to confirm you control the domain.</p>
+    <p><strong>The mail sent to your aliases.</strong> When a message is sent to one of your aliases, AliasNest&rsquo;s mail server receives it and stores it so you can read it in your inbox and/or have it relayed to your real address. Stored mail includes the sender, subject, headers, body, and — on the hosted service — the raw message file. <strong>This is the core function of the product</strong>: holding and forwarding mail addressed to your masks.</p>
+    <p><strong>Your real address.</strong> If you set an alias to forward, we keep the destination (your real) address so we can relay to it. Your real address is never revealed to the people emailing your aliases — keeping it private is the whole point.</p>
+
+    <h2>How we use it</h2>
+    <p>We use the above solely to operate AliasNest — to authenticate you, show your aliases and their mail, and relay messages you&rsquo;ve chosen to forward. <strong>We do not read your mail for advertising, and we do not sell your data or your mail to anyone.</strong> Automated processing (receiving, storing, spam handling, and forwarding) is inherent to running a mail relay.</p>
+
+    <h2>Retention</h2>
+    <p>Messages stay until you delete them, delete the alias that received them, or close your account. Deleting an alias or your account removes its stored mail from the hosted service on a best-effort basis. Backups, if any, age out over time.</p>
+
+    <h2>Third parties</h2>
+    <p>Email is a federated system: to receive and relay mail, AliasNest necessarily exchanges messages with the sending and receiving mail servers across the internet, and your custom-domain DNS records are public by design. Aside from delivering mail, we do not share your account or message contents with third parties. This marketing site uses Google Analytics (GA4); see the <a href="privacy.html">Atsumi Labs privacy policy</a> for that.</p>
+
+    <h2>Self-hosting</h2>
+    <p>AliasNest is <strong>self-hostable</strong>. If you run your own instance, your accounts, aliases, and all mail live on <em>your</em> infrastructure and database — this hosted-service policy does not apply, and Atsumi Labs neither receives nor has access to that data.</p>
+
+    <h2>What we do <em>not</em> do</h2>
+    <ul>
+      <li>We do not sell your personal data or your email.</li>
+      <li>We do not read your mail to build advertising profiles.</li>
+      <li>We do not reveal your real address to senders of mail to your aliases.</li>
+    </ul>
+
+    <h2>Children</h2>
+    <p>AliasNest is a general-audience tool and is not directed at children under 13. We do not knowingly collect personal information from children.</p>
+
+    <h2>Data requests</h2>
+    <p>To export or delete your data, delete your aliases/account in the app or email <a href="mailto:contact@atsumilabs.com">contact@atsumilabs.com</a> and we&rsquo;ll help, consistent with how the service works.</p>
+
+    <h2>Changes to this policy</h2>
+    <p>We may update this policy from time to time. When we do, we&rsquo;ll change the &ldquo;Last updated&rdquo; date above. Continued use of AliasNest after changes are posted means you accept the updated policy.</p>
+
+    <h2>Contact</h2>
+    <p>Questions about AliasNest&rsquo;s privacy? Email <a href="mailto:contact@atsumilabs.com">contact@atsumilabs.com</a>.</p>
+
+    <a class="back" href="aliasnest.html">← Back to AliasNest</a>
+    <p class="disclaimer">AliasNest is in private beta and is run on a best-effort basis. This page is written in plain English and in good faith — a clear summary, not exhaustive legal advice. Don&rsquo;t route mail you can&rsquo;t afford to lose through a beta service; keep a real mailbox for anything critical.</p>
+  </main>
+</body>
+</html>
