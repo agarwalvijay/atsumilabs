@@ -152,6 +152,11 @@ a { color: inherit; text-decoration: none; }
 /* small "coming to the app stores" line under a launch CTA */
 .store-note { font-family: var(--mono); font-size: 0.78rem; color: var(--ink-3); margin-top: 0.95rem; }
 
+/* official "Get it on Google Play" badge */
+.store-badge { display: inline-block; margin-top: 0.9rem; transition: transform 0.2s ease, opacity 0.2s ease; }
+.store-badge img { height: 52px; width: auto; display: block; }
+.store-badge:hover { transform: translateY(-2px); opacity: 0.92; }
+
 /* ───────── section heads ───────── */
 .section-head { max-width: var(--maxw); margin: 0 auto; padding: 0 clamp(1.2rem, 5vw, 3rem); }
 .section-head h2,
