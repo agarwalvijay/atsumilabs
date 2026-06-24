@@ -1,0 +1,80 @@
+/* ============================================================
+   Azure Standard (UNOFFICIAL) showcase — a personal phone app
+   that wraps azurestandard.com. Atsumi paper theme; azure accent.
+   ============================================================ */
+:root { --az: #3b5bdb; --az-soft: rgba(59, 91, 219, 0.12); }
+
+/* ── disclaimer banner (top of page) ── */
+.az-disclaimer {
+  max-width: var(--maxw); margin: 0 auto; padding: 1rem clamp(1.2rem, 5vw, 3rem) 0;
+}
+.az-disclaimer p {
+  display: flex; gap: 0.6rem; align-items: flex-start;
+  background: var(--shu-soft); border: 1px solid rgba(216,71,43,0.3); border-radius: 12px;
+  padding: 0.8rem 1.1rem; color: var(--ink-2); font-size: 0.88rem; line-height: 1.5;
+}
+.az-disclaimer strong { color: var(--shu-deep); }
+.az-disclaimer .ic { color: var(--shu-deep); flex: none; }
+
+/* ── hero (centered) ── */
+.az-hero { max-width: 1080px; margin: 0 auto; text-align: center; padding: clamp(2rem, 6vh, 4rem) clamp(1.2rem, 5vw, 3rem) clamp(1rem, 3vh, 2rem); }
+.az-crumb { color: var(--ink-3); border-bottom: 1px solid transparent; transition: color .2s, border-color .2s; }
+.az-crumb:hover { color: var(--shu-deep); border-color: var(--shu-deep); }
+.az-hero h1 { font-family: var(--serif); font-weight: 500; font-size: clamp(2.6rem, 7vw, 5rem); line-height: 1; letter-spacing: -0.03em; margin: 0.6rem 0 0.8rem; }
+.az-tagline { font-family: var(--serif); font-weight: 400; font-size: clamp(1.3rem, 2.6vw, 1.9rem); line-height: 1.25; letter-spacing: -0.01em; color: var(--ink); max-width: 24ch; margin: 0 auto 1.1rem; }
+.az-accent { color: var(--az); font-style: italic; }
+.az-lede { color: var(--ink-2); font-size: clamp(1rem, 1.5vw, 1.12rem); max-width: 58ch; margin: 0 auto; }
+.az-cta { margin: 1.8rem 0 0.4rem; display: flex; flex-wrap: wrap; justify-content: center; align-items: center; gap: 0.9rem; }
+.badge-soon {
+  display: inline-flex; align-items: center; gap: 0.55rem; font-family: var(--mono); font-size: 0.8rem; letter-spacing: 0.04em;
+  color: var(--ink-3); background: rgba(33,27,22,0.05); border: 1px solid var(--line); border-radius: 999px; padding: 0.5rem 1rem;
+}
+.az-hero-chips { justify-content: center; margin: 1.4rem auto 0; }
+
+/* ── phone frame (static splash poster) ── */
+.az-phone-wrap { position: relative; display: grid; place-items: center; margin: clamp(1.5rem, 4vh, 3rem) auto 0; }
+.az-phone {
+  position: relative; z-index: 2; width: clamp(240px, 30vw, 300px); aspect-ratio: 9 / 19;
+  background: #0c1330; border-radius: 42px; padding: 9px; border: 1px solid rgba(33,27,22,0.25);
+  box-shadow: 0 2px 4px rgba(12,19,48,0.4) inset, 0 34px 70px -28px rgba(12,19,48,0.7), 0 12px 30px -18px rgba(33,27,22,0.5);
+  transform: rotate(1.5deg); transition: transform 0.5s cubic-bezier(.2,.7,.3,1);
+}
+.az-phone:hover { transform: rotate(0deg) translateY(-6px); }
+.az-notch { position: absolute; top: 13px; left: 50%; transform: translateX(-50%); width: 36%; height: 24px; background: #0c1330; border-radius: 0 0 16px 16px; z-index: 3; }
+.az-screen { position: relative; width: 100%; height: 100%; border-radius: 33px; overflow: hidden; background: #0c1330; transform: translateZ(0); }
+.az-screen img { width: 100%; height: 100%; object-fit: cover; object-position: top center; display: block; }
+.az-glow { position: absolute; z-index: 1; width: 78%; aspect-ratio: 1; background: radial-gradient(circle, rgba(59,91,219,0.28), transparent 68%); filter: blur(22px); }
+
+/* ── how it works (dark azure band) ── */
+.az-how { max-width: var(--maxw); margin: clamp(2.5rem, 7vh, 5rem) auto; padding: 0 clamp(1.2rem, 5vw, 3rem); }
+.az-how-inner {
+  position: relative; overflow: hidden;
+  background: radial-gradient(120% 120% at 0% 0%, rgba(59,91,219,0.26), transparent 55%), radial-gradient(90% 90% at 100% 100%, rgba(216,71,43,0.12), transparent 60%), #0c1330;
+  color: #eaf0ff; border-radius: 26px; padding: clamp(2rem, 5vw, 3.4rem); box-shadow: 0 30px 70px -34px rgba(12,19,48,0.7);
+}
+.az-how-eyebrow { font-family: var(--mono); font-size: 0.78rem; letter-spacing: 0.16em; text-transform: uppercase; color: #9db2ff; }
+.az-how h2 { font-family: var(--serif); font-weight: 500; color: #fff; font-size: clamp(1.8rem, 4vw, 2.7rem); line-height: 1.04; letter-spacing: -0.02em; margin: 0.5rem 0 2rem; }
+.az-steps { display: grid; grid-template-columns: repeat(4, 1fr); gap: 1.4rem; }
+.az-step .n { display: inline-grid; place-items: center; width: 2rem; height: 2rem; border-radius: 8px; background: rgba(59,91,219,0.2); color: #9db2ff; font-family: var(--mono); font-size: 0.85rem; margin-bottom: 0.7rem; }
+.az-step h3 { font-family: var(--serif); font-weight: 600; color: #fff; font-size: 1.1rem; margin-bottom: 0.25rem; }
+.az-step p { color: rgba(234,240,255,0.68); font-size: 0.9rem; }
+
+/* ── trademark / non-affiliation callout ── */
+.az-tm { max-width: var(--maxw); margin: 0 auto; padding: clamp(1rem, 3vh, 2rem) clamp(1.2rem, 5vw, 3rem); }
+.az-tm-inner { background: var(--paper-2); border: 1px solid var(--line); border-left: 3px solid var(--shu); border-radius: 16px; padding: 1.6rem 1.8rem; }
+.az-tm h3 { font-family: var(--serif); font-weight: 600; font-size: 1.2rem; margin-bottom: 0.4rem; }
+.az-tm p { color: var(--ink-2); font-size: 0.95rem; max-width: 78ch; }
+.az-tm a { color: var(--shu-deep); border-bottom: 1px solid rgba(178,58,35,0.35); }
+
+/* ── footer ── */
+.az-foot { border-top: 1px solid var(--line); max-width: var(--maxw); margin: 0 auto; padding: 2.4rem clamp(1.2rem, 5vw, 3rem); display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 1.2rem; }
+.az-foot-brand { display: flex; align-items: center; gap: 0.7rem; }
+.az-foot-brand .seal { font-size: 1.1rem; }
+.az-foot-brand strong { font-family: var(--serif); font-size: 1.05rem; display: block; }
+.az-foot-brand span { font-size: 0.82rem; color: var(--ink-3); }
+.az-foot-nav { display: flex; flex-wrap: wrap; gap: 1.4rem; }
+.az-foot-nav a { font-size: 0.9rem; color: var(--ink-2); transition: color .2s; }
+.az-foot-nav a:hover { color: var(--shu-deep); }
+.az-foot .copy { width: 100%; font-size: 0.8rem; color: var(--ink-3); border-top: 1px solid var(--line-2); padding-top: 1.2rem; margin-top: 0.4rem; }
+
+@media (max-width: 760px) { .az-steps { grid-template-columns: 1fr 1fr; } }
