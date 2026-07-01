@@ -43,7 +43,7 @@
 .az-notch { position: absolute; top: 13px; left: 50%; transform: translateX(-50%); width: 36%; height: 24px; background: #0c1330; border-radius: 0 0 16px 16px; z-index: 3; }
 .az-screen { position: relative; width: 100%; height: 100%; border-radius: 33px; overflow: hidden; background: #0c1330; transform: translateZ(0); }
 .az-screen img { width: 100%; height: 100%; object-fit: cover; object-position: top center; display: block; }
-.az-glow { position: absolute; z-index: 1; width: 78%; aspect-ratio: 1; background: radial-gradient(circle, rgba(59,91,219,0.28), transparent 68%); filter: blur(22px); }
+.az-glow { position: absolute; z-index: 1; width: 78%; aspect-ratio: 1; background: radial-gradient(circle, rgba(59,91,219,0.28), transparent 68%); filter: blur(22px); pointer-events: none; }
 
 /* ── how it works (dark azure band) ── */
 .az-how { max-width: var(--maxw); margin: clamp(2.5rem, 7vh, 5rem) auto; padding: 0 clamp(1.2rem, 5vw, 3rem); }
